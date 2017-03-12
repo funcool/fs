@@ -2,12 +2,13 @@
   "Compression utilities."
   (:require [clojure.java.io :as io]
             [me.raynes.fs :as fs])
-  (:import (java.util.zip ZipFile GZIPInputStream)
-           (org.apache.commons.compress.archivers.tar TarArchiveInputStream
-                                                      TarArchiveEntry)
-           (org.apache.commons.compress.compressors bzip2.BZip2CompressorInputStream
-                                                    xz.XZCompressorInputStream)
-           (java.io ByteArrayOutputStream)))
+  (:import java.util.zip.ZipFile
+           java.util.zip.GZIPInputStream
+           org.apache.commons.compress.archivers.tar.TarArchiveInputStream
+           org.apache.commons.compress.archivers.tar.TarArchiveEntry
+           org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream
+           org.apache.commons.compress.compressors.xz.XZCompressorInputStream
+           java.io.ByteArrayOutputStream))
 
 (defn unzip
   "Takes the path to a zipfile `source` and unzips it to target-dir."
@@ -37,7 +38,7 @@
 
 (defn make-zip-stream
   "Create zip file(s) stream. You must provide a vector of the
-  following form: 
+  following form:
 
   ```[[filename1 content1][filename2 content2]...]```.
 
@@ -58,7 +59,7 @@
 
 (defn zip
   "Create zip file(s) on the fly. You must provide a vector of the
-  following form: 
+  following form:
 
   ```[[filename1 content1][filename2 content2]...]```.
 
