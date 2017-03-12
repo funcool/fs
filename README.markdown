@@ -1,12 +1,16 @@
 # fs - File system utilities for Clojure
 
-[![Build Status](https://secure.travis-ci.org/Raynes/fs.png)](http://travis-ci.org/Raynes/fs)
-
-[API docs](http://raynes.github.com/fs/)
+[API docs](https://funcool.github.io/fs/latest/api/)
 
 This library defines some utilities for working with the file system
 in Clojure. Mostly, it wants to fill the gap that `clojure.java.io`
 leaves and add on (and prettify) what `java.io.File` provides.
+
+**NOTE: this library is in maintenance mode. Consider to use [datoteka][1]
+as a modern alternative if you are on JDK8 or greater.**
+
+[1]: https://github.com/funcool/datoteka
+
 
 ## Usage ##
 
